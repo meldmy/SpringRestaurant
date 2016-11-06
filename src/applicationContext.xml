@@ -6,10 +6,24 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- load the property file -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+    <!-- For scan different @Component elements over the code -->
+    <context:component-scan base-package="com.luv2code.springdemo" />
 
-    <!-- Define your beans here -->
-    <bean id="myCoach" class="com.luv2code.springdemo.BaseballCoach">
+    <bean id="betaCoach" class="com.luv2code.springdemo.BaseballCoach"/>
 
+    <bean id="fortuneService" class="com.luv2code.springdemo.FortuneService" scope="prototype">
+        <constructor-arg name="coach" ref="betaCoach"/>
+    </bean>
+
+    <bean id="cricketCoach" class="com.luv2code.springdemo.CricketCoach" init-method="initBean" destroy-method="destrBean">
+        <!-- set up setter injection -->
+        <property name="fortuneService" ref="fortuneService"/>
+
+        <!-- inject props value to fields -->
+        <property name="emailAddress" value="melnik@mit.com"/>
+        <property name="team" value="${foo.team}" />
     </bean>
     
 </beans>
