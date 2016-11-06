@@ -5,6 +5,13 @@ package com.luv2code.springdemo;
  */
 public class BaseballCoach implements Coach
 {
+    public BaseballCoach() {
+    }
+
+    public BaseballCoach(String name) {
+        System.out.println(name);
+    }
+
     @Override
     public String getDailyWorkout()
     {
