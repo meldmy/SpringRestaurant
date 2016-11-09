@@ -1,4 +1,4 @@
-package com.luv2code.springdemo.beanconfig;
+package com.luv2code.springdemo.coaches.beanconfig;
 
 import com.luv2code.springdemo.coaches.AlphaCricketCoach;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

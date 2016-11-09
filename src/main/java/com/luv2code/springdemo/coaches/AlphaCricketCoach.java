@@ -1,8 +1,6 @@
 package com.luv2code.springdemo.coaches;
 
 import com.luv2code.springdemo.coaches.fortune.FortuneService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -18,21 +16,19 @@ import static java.lang.System.out;
  */
 @Component
 @Scope("singleton")
-public class CricketCoach implements Coach
+public class AlphaCricketCoach implements Coach
 {
     @Value("melnik@mit.com")
     private String emailAddress;
     @Value("${foo.team}")
     private String team;
 
-    @Autowired
-    @Qualifier("myFortune")
     private FortuneService fortuneService;
 
-    public CricketCoach() {
+    public AlphaCricketCoach() {
     }
 
-    public CricketCoach(FortuneService reservedFortuneService) {
+    public AlphaCricketCoach(FortuneService reservedFortuneService) {
         out.println("Reserved fortune: "+reservedFortuneService.getFortune());
         fortuneService=reservedFortuneService;
     }
