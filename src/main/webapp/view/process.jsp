@@ -6,11 +6,17 @@
 <body>
 Hello, tester!
 <br><br>
-Tester name, received as GET: ${param.testerName} <br>
-Tester name, received from model layer: ${modelTesterName} <br>
+Tester firstName, received as GET: ${param.testerName} <br>
+Tester last firstName, received as GET: ${param.testerLastName} <br>
+<hr>
+Tester firstName, received from model layer: ${modelTesterName} <br>
+Tester last firstName, received from model layer: ${modelTesterLastName} <br>
+<hr>
+${tester}
 
-<form action="processDataForm" method="GET">
-    <input type="text" name="testerName" placeholder="Change your name"/>
+<form action="/processDataFormAnnRequest" method="GET">
+    <input type="text" firstName="testerName" placeholder="Change your firstName"/>
+    <input type="text" firstName="testerLastName" placeholder="Change your last firstName"/>
     <input type="submit"/>
 </form>
 

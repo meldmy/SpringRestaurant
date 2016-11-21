@@ -5,10 +5,10 @@
 </head>
 <body>
 <h1>Input form example</h1>
-<form action="processDataForm" method="GET">
-    <input type="text" name="testerName" placeholder="What's your name?"/>
-    <input type="submit"/>
-</form>
+<br>
+
+<a href="/showForm">Show form with tester model</a> through Tester object<br>
+<a href="/requestForm">Show simple form with REST attributes</a> that using @RequestParam for retrieving data
 
 </body>
 </html>
