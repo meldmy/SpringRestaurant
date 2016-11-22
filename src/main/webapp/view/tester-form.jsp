@@ -26,6 +26,10 @@ Enter tester's data for processing :
     C++ <form:radiobutton path="favoriteLanguage" value="C++"/>
     Scala <form:radiobutton path="favoriteLanguage" value="Scala"/>
     <br><br>
+    <form:radiobuttons path="experienceLevel" items="${tester.experienceLevels}"/>
+
+
+    <br><br>
     <input type="submit" value="Submit">
 </form:form>
 
