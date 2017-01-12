@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Dmytro Melnychuk
  */
 @Controller
+@RequestMapping("/home")
 public class HelloWorldController {
 
-    @RequestMapping("/")
+    @RequestMapping("/index")
     public String showSite() {
         return "index";
     }
