@@ -2,23 +2,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Tangerine">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         body {
+            font-family: 'Old Standard TT', serif;
+            font-size: 17px;
             background-color: #404040;
             color: powderblue;
         }
+
+        table, th, td {
+            border: 0px;
+            padding: 15px;
+        }
+
+        table {
+            border-spacing: 15px;
+        }
     </style>
-    <title>Test form request example</title>
+    <title>Spring+Hibernate example</title>
 </head>
 <body>
 <div class="container">
-    <h1>Test form request example</h1>
-    <table id="first" width="25%">
+    <h1 class="text-center">Spring & Hibernate example</h1>
+    <br>
+    <table align="center" id="first" width="25%">
         <tr>
             <td>
                 <form action="/showForm">
@@ -37,7 +50,7 @@
         </tr>
     </table>
     <br/>
-    <table border="0" width="100%">
+    <table style="width:100%">
         <tr>
             <td width="33%"><a href="http://hibernate.org/" target="_blank">
                 <img src="/images/hibernate_logo.png" style="width: 100%"/>
